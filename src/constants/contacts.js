@@ -1,1 +1,3 @@
-export const PATH_DB =
+export const PATH_DB = new URL('../db/db.json', import.meta.url).pathname;
+
+console.log(PATH_DB);
