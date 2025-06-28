@@ -12,7 +12,6 @@ export const removeLastContact = async () => {
 
         const toRemove = contacts.pop();
         await fs.writeFile(PATH_DB, JSON.stringify(contacts, undefined, 2));
-        console.log("Removed:", toRemove);
         return toRemove;
     }
     catch (err) {
