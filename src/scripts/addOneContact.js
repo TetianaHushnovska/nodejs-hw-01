@@ -8,7 +8,6 @@ export const addOneContact = async () => {
         const newContact = faker.helpers.multiple(createFakeContact, {
             count: 1,
         });
-        console.log('new:', newContact);
         const existingContacts = await readContacts();
         existingContacts.push(...newContact);
         await writeContacts(existingContacts);
