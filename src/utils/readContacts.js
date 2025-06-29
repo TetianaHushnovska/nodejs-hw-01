@@ -9,7 +9,7 @@ export const readContacts = async () => {
     }
     catch (err) {
         if (err.code === 'ENOENT') return [];
-        console.error('Error reading contacts:', err.message);
+        console.error('Error reading contacts');
         return [];
     }
 };
